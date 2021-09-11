@@ -5,31 +5,17 @@ services:
 
 deploy:
   - provider: elasticbeanstalk
-    region: ap-south-1
-    app: "my-first-app"
-    env: "Myfirstapp-env"
+    region: us-east-1
+    app: "sample-docker-react"
+    env: "Sampledockerreact-env"
 
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
 
-    bucket_name: "my-first-app-bucket"
+    bucket_name: "elasticbeanstalk-us-east-1-092354816535"
 
-    bucket_path: "docker"
+    bucket_path: "EBApptest"
 
     on:
       branch: main
 
-  - provider: elasticbeanstalk
-    region: ap-south-1
-    app: "test-app"
-    env: "Testapp-env"
-
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
-
-    bucket_name: "my-first-app-bucket"
-  
-    bucket_path: "docker"
-
-    on:
-      branch: testing 
